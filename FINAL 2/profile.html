@@ -1,12 +1,12 @@
 <!--  Katharine LoScalzo 
       Intro to Web Dev. 
       Final Project Attempt 2    
-      Your Profile -->
+      Contact -->
 
 <!DOCTYPE>
 <html>
 
-<meta name=”viewport” content=”width=device-width, intial-scale=1.0”>
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
 
 <head>
     <meta charset="utf-8">
@@ -17,6 +17,10 @@
 
     <link href="bootstrap/js/bootstrap.js" rel="stylesheet">
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <script language="javascript" type="text/javascript" src="p5.js"></script>
+    <script language="javascript" src="p5.sound.js"></script>
+    <script language="javascript" type="text/javascript" src="audio1.js"></script>
 
 
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -30,7 +34,7 @@
         body {
             background-image: url("bgPic.jpg");
             background-size: 100% 100%;
-            background-repeat: no-repeat;
+            background-repeat: repeat;
         }
         
         .centers {
@@ -54,6 +58,37 @@
         a:active {
             text-decoration: none;
             color: ivory;
+        }
+        
+        .blackBox {
+            margin-top: 75px;
+            background-color: black;
+            margin-left: 20%;
+            margin-right: 30%;
+            height: 80%;
+        }
+        
+        .contactt {
+            padding-top: 20px;
+            position: absolute;
+            left: 25%;
+            right: 25%;
+        }
+        
+        label {
+            color: ivory;
+            font-size: 16px;
+        }
+        
+        h3 {
+            color: ivory;
+            font-size: 20px;
+            padding-top: 30px;
+            padding-left: 43px;
+        }
+        
+        footer {
+            padding-top: 320px;
         }
 
     </style>
@@ -85,6 +120,47 @@
     </ul>
 
 
-</body>
+    <div class="blackBox">
+
+        <h3>Sign Up!</h3>
+
+        <div class="contactt">
+
+
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" name="name" placeholder="First and Last Name" value="">
+            </div>
+            <br></br>
+            <label for="email" class="col-sm-2 control-label">E-mail</label>
+            <div class="col-sm-10">
+                <input type="email" name="email" placeholder="user@domain.com" value="">
+            </div>
+
+            <br></br>
+
+            <label for="username" class="col-sm-2 control-label">Username</label>
+            <div class="col-sm-10">
+                <input type="text" name="name" placeholder="Account name" value="">
+            </div>
+
+            <br></br>
+
+            <label for="name" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+                <input type="text" name="name" placeholder="8-characters min" value="">
+            </div>
+
+            <div class="col-sm-10 col-sm-offset-2">
+                <br>
+                <input name="send" value="Register" type="submit">
+            </div>
+
+
 
 </html>
+
+ <footer>
+                <h2>Katharine LoScalzo  |  IDM  | 2016</h2></footer>
+
+
