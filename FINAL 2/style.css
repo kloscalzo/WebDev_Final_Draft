@@ -11,6 +11,7 @@ ul.topnav {
     letter-spacing: 2px;
     font-size: 16.5px;
     text-decoration: none;
+    z-index: 99999;
 }
 
 li {

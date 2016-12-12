@@ -19,10 +19,20 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 
 
+
+    <script language="javascript" type="text/javascript" src="p5.js"></script>
+    <script language="javascript" src="p5.sound.js"></script>
+    <script language="javascript" type="text/javascript" src="audio2.js"></script>
+
+    
+
     <link href="style.css" rel="stylesheet" type="text/css">
 
     <link href="https://fonts.googleapis.com/css?family=Tangerine|Shadows+Into+Light|Opens+Sans" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Dancing+Script|Indie+Flower" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 
     <title>Contemplation</title>
 
@@ -30,7 +40,7 @@
         body {
             background-image: url("bgPic.jpg");
             background-size: 100% 100%;
-            background-repeat: no-repeat;
+            background-repeat: repeat;
         }
         
         .centers {
@@ -55,6 +65,37 @@
             text-decoration: none;
             color: ivory;
         }
+        
+        .myImages {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #images {
+            text-align: center;
+        }
+        
+        .topPadding {
+            padding-top: 60px;
+        }
+        
+        .rightPadding {
+            padding-right: 50px;
+        }
+        
+        p {
+            color: ivory;
+            text-align: center;
+            padding-top: 40px;
+            font-size: 40px;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 5px;
+        }
+        
+        .mePhoto {
+            padding: center;
+        }
 
     </style>
 
@@ -76,7 +117,7 @@
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-     <li style="float:right">
+        <li style="float:right">
             <a class="active" href="profile.html">
                 <span class="glyphicon glyphicon-user"></span>
             </a>
@@ -85,6 +126,35 @@
     </ul>
 
 
+    <div class="topPadding">
+        <div id="images">
+
+            <div class="myImages">
+                <div class="rightPadding">
+                    <img src="writing.jpg" alt="writing" width="500" height="300"></div>
+            </div>
+
+
+            <div class="myImages">
+                <img src="typing.jpg" alt="typing" width="500" height="300">
+            </div>
+        </div>
+    </div>
+
+    <div class="text-glow">
+        <p>Bridging the gap between poetry and technology.</p>
+    </div>
+
+    <div class="blackBox">
+
+
+
+    </div>
+    <div class="mePhoto">
+        <img src="founder.png" alt="me" width="800" height="300"></div>
+
+    <footer>
+        <h2>Katharine LoScalzo  |  IDM  | 2016</h2></footer>
 
 </body>
 
