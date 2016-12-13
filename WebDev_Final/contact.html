@@ -1,0 +1,293 @@
+<!DOCTYPE>
+<html>
+
+
+
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link href="bootstrap/js/bootstrap.js" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <script language="javascript" type="text/javascript" src="p5.js"></script>
+    <script language="javascript" src="p5.sound.js"></script>
+    <script language="javascript" type="text/javascript" src="audio1.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Tangerine|Shadows+Into+Light|Opens+Sans" rel="stylesheet">
+
+
+    <title>Contemplation</title>
+
+    <style>
+        body {
+            background-image: url("bgPic.jpg");
+            background-size: 100% 100%;
+            background-repeat: repeat;
+        }
+        
+        ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            font-family: 'Times New Roman', sans-serif;
+            letter-spacing: 2px;
+            font-size: 16.5px;
+            text-decoration: none;
+            z-index: 99999;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            margin-left: 0px;
+            display: block;
+            color: ivory;
+            text-align: center;
+            padding: 9px 60px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: purple;
+            text-decoration: none;
+            color:ivory;
+        }
+        
+        <style type="text/css"> .form-style-1 {
+            margin: 10px auto;
+            max-width: 400px;
+            padding: 20px 12px 10px 20px;
+            font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        }
+        
+        .form-style-1 li {
+            padding: 0;
+            display: block;
+            list-style: none;
+            margin: 10px 0 0 0;
+        }
+        
+        .form-style-1 label {
+            margin: 0 0 3px 0;
+            padding: 0px;
+            display: block;
+            font-weight: bold;
+        }
+        
+        .form-style-1 input[type=text],
+        .form-style-1 input[type=date],
+        .form-style-1 input[type=datetime],
+        .form-style-1 input[type=number],
+        .form-style-1 input[type=search],
+        .form-style-1 input[type=time],
+        .form-style-1 input[type=url],
+        .form-style-1 input[type=email],
+        textarea,
+        select {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border: 1px solid #BEBEBE;
+            padding: 7px;
+            margin: 0px;
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            outline: none;
+        }
+        
+        .form-style-1 .field-divided {
+            width: 49%;
+        }
+        
+        .form-style-1 .field-long {
+            width: 100%;
+        }
+        
+        .form-style-1 .field-select {
+            width: 100%;
+        }
+        
+        .form-style-1 .field-textarea {
+            height: 100px;
+        }
+        
+        .form-style-1 input[type=submit],
+        .form-style-1 input[type=button] {
+            background: #f5f5dc;
+            padding: 8px 15px 8px 15px;
+            border: none;
+            color: #000000;
+        }
+        
+        .form-style-1 input[type=submit]:hover,
+        .form-style-1 input[type=button]:hover {
+            background: #551a8b;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+        
+        .form-style-1 .required {
+            color: red;
+        }
+        
+        .text-glow {
+            -webkit-stroke-width: 5.3px;
+            -webkit-stroke-color: #FFFFFF;
+            -webkit-fill-color: #FFFFFF;
+            text-shadow: 1px 0px 20px peachpuff;
+            -webkit-transition: width 0.3s;
+            transition: width 0.3s;
+        }
+        
+        .mainHead {
+            color: ivory;
+            text-align: center;
+            letter-spacing: 13px;
+            font-size: 80px;
+            padding-top: 0px;
+            padding-left: 3px;
+            padding-right: 3px;
+            padding-bottom: 1px;
+            font-family: 'Tangerine', cursive;
+            position: static;
+        }
+        
+        .sideHead {
+            color: ivory;
+            letter-spacing: 10px;
+            font-size: 15px;
+            position: absolute;
+            top: 215px;
+            right: 5;
+            padding-bottom: 1cm;
+            font-family: 'Shadows Into Light', cursive;
+            margin-right: auto;
+            width: 51%;
+            text-align: justify;
+        }
+        
+        .mainButtons {
+            width: 100%;
+            padding: 20px;
+        }
+        
+        mainButtons a:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        h2 {
+            padding-top: 50px;
+            color: ivory;
+            text-align: center;
+        }
+        
+        label {
+            color: ivory;
+        }
+        
+        .blackBOX {
+            padding: 50px;
+            background: black;
+            width: 100%;
+            height: 60%;
+        }
+        
+        footer {
+            position: fixed;
+            height: 50px;
+            background-color: black;
+            opacity: 0.5;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        
+        #footNote {
+            color: ivory;
+            text-align: center;
+            font-size: 17px;
+            margin-top: 12px;
+        }
+
+    </style>
+</head>
+
+
+
+
+<body>
+
+
+    <body>
+        <div class="text-glow">
+            <div class="mainHead">
+                <h1>Contemplation</h1></div>
+
+            <div class="sideHead">
+                <h2>WHERE POETRY LIVES</h2></div>
+        </div>
+
+
+        <ul class="topnav">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li style="float:right">
+                <a class="active" href="profile.html">
+                    <span class="glyphicon glyphicon-user"></span>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="blackBOX">
+            <form>
+                <ul class="form-style-1">
+                    <dt>
+                    <label>Full Name <span class="required">*</span></label>
+                    <input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;
+                    <input type="text" name="field2" class="field-divided" placeholder="Last" />
+                </dt>
+                    <dt>
+                    <label>Email <span class="required">*</span></label>
+                    <input type="email" name="field3" class="field-long" />
+                </dt>
+
+                    <dt>
+                    <label>Your Message <span class="required">*</span></label>
+                    <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+                </dt>
+                    <dt>
+                    <input type="submit" value="Submit"/>
+                </dt>
+                </ul>
+            </form>
+        </div>
+
+        <footer>
+            <div id="footNote">
+                Katharine LoScalzo | IDM | 2016 &copy;</div>
+        </footer>
+
+    </body>
+
+</html>
